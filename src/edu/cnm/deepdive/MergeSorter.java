@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MergeSorter {
 
   public void sort(int[] input) {
-    if (input.length < 1) {
+    if (input.length > 1) {
       int midpoint = input.length / 2;
       int[] left = Arrays.copyOfRange(input, 0, midpoint);
       int[] right = Arrays.copyOfRange(input, midpoint, input.length);
@@ -29,17 +29,16 @@ public class MergeSorter {
       }
       outputIndex++;
     }
-    while (leftIndex < left.length){
-      output [outputIndex] = left [leftIndex];
+    while (leftIndex < left.length) {
+      output[outputIndex] = left[leftIndex];
       leftIndex++;
       outputIndex++;
     }
-    while (rightIndex < right.length){
-      output [outputIndex] = right [rightIndex];
+    while (rightIndex < right.length) {
+      output[outputIndex] = right[rightIndex];
       rightIndex++;
       outputIndex++;
     }
-
   }
 
 }
